@@ -1,3 +1,6 @@
+import './style.css';
+import printMe from './print';
+
 const Form = (() => {
 
     const emailValidation = function () {
@@ -64,3 +67,12 @@ const Form = (() => {
     document.getElementById('zipcode').addEventListener('focusout', zipcodeValidation);
     document.getElementById('password-confirm').addEventListener('focusout', confirmPassword);
 })();
+
+
+const btn = document.createElement('button');
+
+btn.innerHTML = "Submit";
+
+btn.onclick = printMe;
+
+document.getElementById('form').appendChild(btn);
